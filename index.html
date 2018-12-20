@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<style>
+#gifs{
+  position:relative;
+  left: 10px;
+  top: 10px;
+  z-index: -1;
+}
+
+#titles{
+  position: relative;
+  top: 70px;
+  text-align: center;
+  color: 'red'
+}
+
+#title{
+  color:'black'
+}
+
+
+.opClass {
+    opacity:0.5;
+    /* filter:alpha(opacity=40); /* For IE8 and earlier */ */
+}
+
+/*  ***************** copied from w3 school ********************** */
+
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+    background: #000;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+}
+
+/* The slider itself */
+.slider {
+    /* -webkit-appearance: none;  /* Override default CSS styles */
+    /* appearance: none; */ */
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    position: relative;
+    left: 40px;
+    top: 0px;
+    margin: 10px,0px;
+    z-index: 1;
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    /* -webkit-transition: .2s; /* 0.2 seconds transition on hover */ */
+    /* transition: opacity .2s; */
+}
+
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    /* -webkit-appearance: none; /* Override default look */ */
+    /* appearance: none; */
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+</style>
+
+
+<head>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+  <style>
+  .opClass {
+      opacity:0.4;
+      /* filter:alpha(opacity=40); /* For IE8 and earlier */ */
+  }
+
+</style>
+  <!-- <script  src = "style.css"></script> -->
+  <script src="libs/p5.min.js"></script>
+  <script src="libs/p5-sound.js"></script>
+  <script src="libs/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/13.3.11/Tone.js"></script>
+  <script src ="music.js"></script>
+
+</head>
+<body>
+  <div class="slidecontainer">
+  <input type="range" min="0" max="100" value="0" class="slider" id="range1">
+  <input type="range" min="0" max="100" value="0" class="slider" id="range2">
+  <input type="range" min="0" max="100" value="0" class="slider" id="range3">
+  <input type="range" min="0" max="100" value="0" class="slider" id="range4">
+  <input type="range" min="0" max="100" value="0" class="slider" id="range5">
+  <input type="range" min="0" max="100" value="0" class="slider" id="range6">
+  <input type="range" min="0" max="100" value="0" class="slider" id="range7">
+  <input type="range" min="0" max="100" value="0" class="slider" id="range8">
+  </div>
+
+  <div id = "titles">
+  <h1 id = 'title'> LIVE VIDEJAY</h1>
+  <p> Drag sliders to make music and visuals </p>
+  <marquee> GET TRIPPY </marquee>
+  </div>
+
+  <div id ="gifs">
+  <img id="gif1" src='https://media.giphy.com/media/WS5TL5IiWAfRK/giphy.gif'></img>
+  <img id="gif2" src='https://media.giphy.com/media/Um27tTsg0mSdO/giphy.gif'></img>
+  <img id="gif3" src='https://media.giphy.com/media/8j3CTd8YJtAv6/giphy.gif'></img>
+  <img id="gif4" src='https://media.giphy.com/media/TgKEjjz1lzjmEsuz80/giphy.gif'></img>
+  <img id="gif5" src='https://media.giphy.com/media/5xaOcLGvzHxDKjufnLW/giphy.gif'></img>
+  <img id="gif6" src='https://media.giphy.com/media/l2JhL1AzTxORUTDlC/giphy.gif'></img>
+  <img id="gif7" src='https://media.giphy.com/media/wAxlCmeX1ri1y/giphy.gif'></img>
+  <img id="gif8" src='https://media.giphy.com/media/SGkufeMafyuBhIw796/giphy.gif'></img>
+</div>
+
+</body>
+
+<br><br>
+<!-- <h1 id = 'title'> Write something</h1>
+<textarea id="textInput" style="width: 300px; height: 50px;" placeholder="type here"></textarea> -->
+<script src = "sketch.js"></script>
+
+<!-- <img id="gif1" src='https://media.giphy.com/media/WS5TL5IiWAfRK/giphy.gif'></img> -->
